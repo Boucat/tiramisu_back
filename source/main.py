@@ -5,5 +5,5 @@ tiramisu = FastAPI()
 
 
 @tiramisu.get('/stillalive')
-async def still_alive(status_code=200):
+async def still_alive():
     return HTMLResponse('the tiramisu is wet', 200)
