@@ -1,6 +1,13 @@
 # tiramisu_back
 Back de tiramisu.cat
 
+## Next steps
+- Connect with Firebase
+- Dockerize app
+- Connect with UI
+- Add tests
+- Deployment management
+
 ## Datalayer
 
 ### user
