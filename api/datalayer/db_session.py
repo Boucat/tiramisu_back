@@ -1,6 +1,5 @@
 import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
+from firebase_admin import credentials, firestore
 
 # Change for some private credentials (research on it)
 cred = credentials.ApplicationDefault()

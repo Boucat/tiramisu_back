@@ -9,6 +9,7 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
+
 @router.get("/")
 async def read_reviews():
     return review_tiramisu_service.get_all_reviews()
