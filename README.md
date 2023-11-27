@@ -1,7 +1,7 @@
-# tiramisu_back
-Back de tiramisu.cat
+# Back end for [tiramisu.cat](https://tiramisu.cat)
+This is the back end for the widely popular and fully trusted [tiramisu.cat](https://tiramisu.cat) website. Where your most trusted people uploads their tiramisu reviews.
 
-## Next steps
+## Next steps 🧗
 - Connect with Firebase
 - Dockerize app
 - Connect with UI
