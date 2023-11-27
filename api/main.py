@@ -15,7 +15,7 @@ tiramisu = FastAPI(
 )
 
 # Include the router in the main app
-tiramisu.include_router(router, prefix="/source")
+tiramisu.include_router(router, prefix="/api")
 
 
 @tiramisu.get('/stillalive', include_in_schema=False)

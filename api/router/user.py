@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from source.service import user_service
+from api.service import user_service
 
 router = APIRouter(
     prefix="/user",

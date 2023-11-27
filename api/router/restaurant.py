@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from source.service import restaurant_service
+from api.service import restaurant_service
 
 router = APIRouter(
     prefix="/restaurant",

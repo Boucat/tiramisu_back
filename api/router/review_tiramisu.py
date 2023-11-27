@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 
-from source.dependencies import get_query_token
-from source.service import review_tiramisu_service
+from api.dependencies import get_query_token
+from api.service import review_tiramisu_service
 
 router = APIRouter(
     prefix="/review_tiramisu",

@@ -1,4 +1,4 @@
-from source.datalayer.repository import review_tiramisu_repository
+from api.datalayer.repository import review_tiramisu_repository
 
 
 def get_all_reviews():

@@ -1,4 +1,4 @@
-from source.datalayer.repository import restaurant_repository
+from api.datalayer.repository import restaurant_repository
 
 
 def get_restaurant(restaurant_id: str):
