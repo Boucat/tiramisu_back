@@ -1,9 +1,8 @@
-from api.router.tiramisu import tiramisu_router
-from api.router.review_tiramisu import review_tiramisu_router
-
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
+from api.router.review_tiramisu import review_tiramisu_router
+from api.router.tiramisu import tiramisu_router
 
 # Create an instance of FastAPI
 tiramisu = FastAPI(
@@ -24,4 +23,3 @@ async def still_alive():
 tiramisu.include_router(tiramisu_router, prefix='/api/v1')
 
 tiramisu.include_router(review_tiramisu_router, prefix='/api/v1')
-
