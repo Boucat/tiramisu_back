@@ -1,35 +1,19 @@
 from fastapi import APIRouter, Depends
 
-from api.dependencies import get_query_token
-from api.service import review_tiramisu_service
+from api.dependencies import check_user_token
 
-router = APIRouter(
-    prefix="/review_tiramisu",
-    tags=["review_tiramisu"],
-    responses={404: {"description": "Not found"}},
+
+review_tiramisu_router = APIRouter(
+    prefix='/review_tiramisu',
+    tags=['review_tiramisu'],
+    responses={404: {'description': 'Not found'}},
 )
 
 
-@router.get("/")
-async def read_reviews():
-    return review_tiramisu_service.get_all_reviews()
-
-
-@router.get("/{user_id}")
-async def read_reviews_by_user_id():
-    return review_tiramisu_service.get_all_reviews_by_user_id()
-
-
-@router.get("/{restaurant_id}")
-async def read_reviews_by_restaurant_id():
-    return review_tiramisu_service.get_all_reviews_by_restaurant_id()
-
-
-@router.post(
-    "/",
-    tags=["custom"],
-    responses={403: {"description": "Operation forbidden"}},
-    dependencies=[Depends(get_query_token)],
+@review_tiramisu_router.post(
+    '/',
+    responses={401: {'description': 'User not found'}},
+    dependencies=[Depends(check_user_token)],
 )
-async def create_review():
-    return review_tiramisu_service.create_review()
+async def create_review(user_id):
+    return user_id
