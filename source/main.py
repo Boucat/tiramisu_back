@@ -1,13 +1,23 @@
-from fastapi import FastAPI
+from fastapi import APIRouter, FastAPI
 from fastapi.responses import HTMLResponse
-from source.router import user, review_tiramisu
 
-tiramisu = FastAPI()
+# Create an instance of APIRouter
+router = APIRouter()
 
-tiramisu.include_router(user.router)
-tiramisu.include_router(review_tiramisu.router)
+# Create an instance of FastAPI
+tiramisu = FastAPI(
+    title="Tiramisu.cat API",
+    description="Today is a fantastic day to APIfy a Tiramisu",
+    version="1.0.0",
+    openapi_url="/docs/openapi.json",
+    docs_url="/docs/documentation",
+    redoc_url="/docs/redoc",
+)
+
+# Include the router in the main app
+tiramisu.include_router(router, prefix="/source")
 
 
-@tiramisu.get('/stillalive')
+@tiramisu.get('/stillalive', include_in_schema=False)
 async def still_alive():
     return HTMLResponse('the tiramisu is wet', 200)
