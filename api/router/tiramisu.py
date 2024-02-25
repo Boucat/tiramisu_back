@@ -13,11 +13,4 @@ tiramisu_router = APIRouter(
 # Endpoint to get all tiramisus from a user
 @tiramisu_router.get('/{user_id}')
 async def get_tiramisus_from_user(user_id: str):
-    get_all_users = [user.get('id') for user in USERS]
-    if user_id in get_all_users:
-        return HTMLResponse(
-            '<div> all your tiramisus are the best Sr. ' + user_id +
-            '</div> <div> <img src=https://avatars.githubusercontent.com/u/29044151?v=4> </div>', 200
-        )
-    else:
-        return HTTPException(status_code=404, detail=f'User {user_id} not found')
+    pass
