@@ -1,0 +1,22 @@
+version: '3.5'
+services:
+
+  tiramisu_back:
+    image: tiramisu_back
+    container_name: tiramisu_back
+    build: .
+    ports:
+      - "80:80"
+    restart: always
+    networks:
+      - tiramisu_back
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "1"
+
+networks:
+  tiramisu_back:
+    name: tiramisu_back
+    driver: bridge
