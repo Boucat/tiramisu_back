@@ -9,8 +9,8 @@ def display_user(user_id: str):
     if user_info:
         return HTMLResponse(
             f"<title> Tiramisus de Catalunya </title>"
-            f"<h1> All your tiramisus are the best Mr. {user_info.get('name')}</h1> <br>"
-            + f"<center> <img src={user_info.get('photo_url')}> </center>",
+            f"<h1>{user_info.get('name')}: {user_info.get('description')}</h1> <br>"
+            + f"<center> <img src={user_info.get('photo_url')} width='auto' height='50%'> </center>",
             200,
         )
     else:
