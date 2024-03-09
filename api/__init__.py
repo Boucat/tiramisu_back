@@ -1,3 +1,8 @@
+SECRET_KEY = '9f44fd3304e0a7d0832f0627d9f9c6066a47786551a346bc47225eb65549d257'
+ALGORITHM = 'HS256'
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+
 USER_MOCK_DB = {
     'ferrannoguera': {
         'username': 'ferrannoguera',
@@ -26,5 +31,8 @@ USER_MOCK_DB = {
 }
 
 __all__ = [
+    'SECRET_KEY',
+    'ALGORITHM',
+    'ACCESS_TOKEN_EXPIRE_MINUTES',
     'USER_MOCK_DB',
 ]
