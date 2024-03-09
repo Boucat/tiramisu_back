@@ -1,4 +1,5 @@
 fastapi
 passlib[bcrypt]
 pre-commit
+python-jose[cryptography]
 uvicorn
