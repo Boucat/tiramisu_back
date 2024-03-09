@@ -1,4 +1,3 @@
 fastapi
-firebase-admin
 pre-commit
 uvicorn
