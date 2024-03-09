@@ -1,3 +1,4 @@
 fastapi
+passlib[bcrypt]
 pre-commit
 uvicorn
