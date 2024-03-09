@@ -1,7 +1,5 @@
-from fastapi import APIRouter, HTTPException
-from fastapi.responses import HTMLResponse
+from fastapi import APIRouter
 
-from api import USERS
 
 tiramisu_router = APIRouter(
     prefix='/tiramisu',
