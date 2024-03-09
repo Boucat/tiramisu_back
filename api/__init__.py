@@ -11,4 +11,10 @@ USERS = {
         'description': 'Amb llicència per degustar tiramisú',
         'photo_url': 'https://raw.githubusercontent.com/Boucat/tiramisu_back/main/media/users/marcklingenberg.jpg',
     },
+    'ea16f9559aa30d59c5edaefb35c5a57675dcb807': {
+        'id': 'albertsuarez',
+        'name': 'Albert Suarez',
+        'description': 'A punt de tastar el pitjor tiramisú georgiano de la història',
+        'photo_url': 'https://raw.githubusercontent.com/Boucat/tiramisu_back/main/media/users/albertsuarez.jpg',
+    },
 }
