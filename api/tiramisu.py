@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
+from api.router.authorization import authorization_router
 from api.router.review_tiramisu import review_tiramisu_router
 from api.router.tiramisu import tiramisu_router
 from api.router.user import user_router
@@ -23,7 +24,7 @@ async def still_alive():
 
 tiramisu.include_router(authorization_router, prefix='/v1')
 
-# tiramisu.include_router(user_router, prefix='/v1')
+tiramisu.include_router(user_router, prefix='/v1')
 
 # tiramisu.include_router(tiramisu_router, prefix='/v1')
 

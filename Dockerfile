@@ -14,4 +14,4 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.lock
 
 # Run uvicorn framework at desired port
-CMD ["uvicorn", "api.main:tiramisu", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "api.tiramisu:tiramisu", "--host", "0.0.0.0", "--port", "80"]
