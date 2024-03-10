@@ -1,5 +1,6 @@
 fastapi
-passlib[bcrypt]
+passlib
+bcrypt==4.0.1
 pre-commit
 pydantic
 python-jose[cryptography]
